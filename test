@@ -1,0 +1,12 @@
+<Doctype HTML>
+    <h1>
+   Choose something:
+</h1
+<form>
+   <input type = "radio" id = "agree" name = "vote" value = "agree">
+   <label for = "agree">Agree</label>
+   
+   <input type = "radio" id = "disagree" name = "vote" value = "disagree">
+   <label for = "disagree">Disagree</label>
+</form>
+</Doctype>
