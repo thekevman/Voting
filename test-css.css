@@ -1,12 +1,12 @@
 input[type = "radio"]{
    appearance: none;
    background-color: #FFF;
-   margin: 2;
-   font: helvetica;
+   margin: 2px;
+   font-family: Helvetica, Arial, sans-serif;
    color: #010175;
    width: 2rem;
    height: 2rem;
-   display: inline;
+   display: inline-grid;
    place-content: center;
    cursor: pointer;
    border: 0.15em solid #007d7b;
@@ -21,7 +21,10 @@ input[type = "radio"]::before{
    height: 1rem;
    transform: scale(0);
    transition: transform 0.15s ease-in-out;
-   box-shadow: inset 1em 1em #3197EE;
+}
+
+input[type = "radio"]:checked::before{
+   transform: scale(1);
 }
 
 #agree:checked{
