@@ -1,0 +1,121 @@
+input[type = "radio"]{
+   appearance: none;
+   background-color: #FFF;
+   margin: 2px;
+   font-family: Helvetica, Arial, sans-serif;
+   color: #3e3ebc;
+   width: 2rem;
+   height: 2rem;
+   display: inline-grid;
+   place-content: center;
+   cursor: pointer;
+   border: 0.2em solid #2f2f2f;
+   border-radius: 50%;
+   vertical-align: middle;
+}
+
+input[type = "radio"]::before{
+   content: "";
+   border-radius: 50%;
+   width: 1rem;
+   height: 1rem;
+   transform: scale(0);
+   transition: transform 0.1s ease-in-out;
+}
+
+input[type = "radio"]:checked::before{
+   transform: scale(1);
+}
+
+#agree:checked{
+   border-color: #28A745;
+   background-color: #67ff5c;
+}
+
+#agree:checked::before {
+  background-color: #28a745;
+}
+
+#disagree:checked {
+  border-color: #dc3545;
+  background-color: #ff9696;
+}
+
+#disagree:checked::before {
+  background-color: #dc3545;
+}
+
+input[type="radio"]:hover {
+  background-color: #5c8ac1;
+}
+
+label {
+   pointer-events: none;
+   cursor: default;
+   font-size: 2rem;
+   vertical-align: middle;
+   margin-left: 3px;
+}
+h1.vote-page-title {
+   font-size: 2.3rem;
+   cursor: default;
+   color: #ffffff;
+}
+
+
+
+
+.button-container {
+   background: rgba(255, 255, 255, 0.08);
+   backdrop-filter: blur(10px);
+   border-radius: 5px;
+   padding: 4px;
+   border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.button {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0.75rem 1.25rem;
+   background-color: #1f4ed8;
+   color: #ffffff;
+   text-decoration: none;
+   border-radius: 0.5rem;
+   font-weight: 600;
+   transition: transform 0.15s ease, background-color 0.15s ease;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5px;
+}
+
+.button:hover {
+   background-color: #163aa6;
+   transform: translateY(-1.5px);
+}
+
+.button:active {
+   transform: translateY(0);
+}
+
+body {
+   margin: 0;
+   min-height: 100vh;
+   background: linear-gradient(35deg, #00797d, #00cecb);
+}
+
+.button img {
+   width:100%;
+   max-width: 90px;
+   height: auto;
+   object-fit: contain;
+}
+
+.voting-content {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 30px;
+   padding: 20px;
+   margin-bottom: 60px;
+}
